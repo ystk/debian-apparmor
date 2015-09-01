@@ -1,0 +1,53 @@
+# Please add new symbols in a section that corresponds to the upcoming
+# release version, adding a new section if necessary
+#
+# If you update this file please follow the instructions on library
+# versioning in Makefile.am
+
+IMMUNIX_1.0 {
+  global:
+        change_hat;
+  local:
+        *;
+};
+
+APPARMOR_1.0 {
+  global:
+        change_hat;
+        parse_record;
+        free_record;
+  local:
+        *;
+} IMMUNIX_1.0;
+
+APPARMOR_1.1 {
+  global:
+        aa_is_enabled;
+        aa_find_mountpoint;
+        aa_change_hat;
+        aa_change_hatv;
+        aa_change_hat_vargs;
+        aa_change_profile;
+        aa_change_onexec;
+        aa_gettaskcon;
+        aa_getcon;
+        aa_getpeercon_raw;
+        aa_getpeercon;
+        parse_record;
+        free_record;
+        aa_getprocattr_raw;
+        aa_getprocattr;
+        aa_query_label;
+
+	# no more symbols here, please
+
+  local:
+	*;
+} APPARMOR_1.0;
+
+APPARMOR_2.9 {
+  global:
+	aa_query_label;
+  local:
+	*;
+} APPARMOR_1.1;
