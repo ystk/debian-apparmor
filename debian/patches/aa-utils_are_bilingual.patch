@@ -1,0 +1,129 @@
+Author: Jamie Strandboge <jamie@canonical.com>
+Description: aa-status was written to work with python 2 or 3. Upstream is
+ still using 2, so adjust ours to use /usr/bin/python3 to avoid pulling
+ python 2 back to the desktop images
+Forwarded: no
+---
+ utils/aa-audit      |    2 +-
+ utils/aa-autodep    |    2 +-
+ utils/aa-cleanprof  |    2 +-
+ utils/aa-complain   |    2 +-
+ utils/aa-disable    |    2 +-
+ utils/aa-enforce    |    2 +-
+ utils/aa-genprof    |    2 +-
+ utils/aa-logprof    |    2 +-
+ utils/aa-mergeprof  |    2 +-
+ utils/aa-status     |    2 +-
+ utils/aa-unconfined |    2 +-
+ 11 files changed, 11 insertions(+), 11 deletions(-)
+
+Index: b/utils/aa-status
+===================================================================
+--- a/utils/aa-status
++++ b/utils/aa-status
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ------------------------------------------------------------------
+ #
+ #    Copyright (C) 2005-2006 Novell/SUSE
+Index: b/utils/aa-audit
+===================================================================
+--- a/utils/aa-audit
++++ b/utils/aa-audit
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-autodep
+===================================================================
+--- a/utils/aa-autodep
++++ b/utils/aa-autodep
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-cleanprof
+===================================================================
+--- a/utils/aa-cleanprof
++++ b/utils/aa-cleanprof
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-complain
+===================================================================
+--- a/utils/aa-complain
++++ b/utils/aa-complain
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-disable
+===================================================================
+--- a/utils/aa-disable
++++ b/utils/aa-disable
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-enforce
+===================================================================
+--- a/utils/aa-enforce
++++ b/utils/aa-enforce
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-genprof
+===================================================================
+--- a/utils/aa-genprof
++++ b/utils/aa-genprof
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-logprof
+===================================================================
+--- a/utils/aa-logprof
++++ b/utils/aa-logprof
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-mergeprof
+===================================================================
+--- a/utils/aa-mergeprof
++++ b/utils/aa-mergeprof
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #
+Index: b/utils/aa-unconfined
+===================================================================
+--- a/utils/aa-unconfined
++++ b/utils/aa-unconfined
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#!/usr/bin/python3
+ # ----------------------------------------------------------------------
+ #    Copyright (C) 2013 Kshitij Gupta <kgupta8592@gmail.com>
+ #

@@ -1,0 +1,43 @@
+Description: Document D-Bus getcon method in aa_getcon man page
+ .
+ This patch should be submitted to upstream AppArmor after the AppArmor
+ mediation patches are submitted to upstream D-Bus.
+Author: Tyler Hicks
+Forwarded: no
+
+Index: apparmor-2.8.0/libraries/libapparmor/doc/aa_getcon.pod
+===================================================================
+--- apparmor-2.8.0.orig/libraries/libapparmor/doc/aa_getcon.pod	2013-09-05 10:44:00.363697315 -0700
++++ apparmor-2.8.0/libraries/libapparmor/doc/aa_getcon.pod	2013-09-05 11:55:34.719609188 -0700
+@@ -28,6 +28,8 @@ aa_getcon, aa_gettaskcon - get task conf
+ 
+ aa_getpeercon - get the confinement of a socket's other end (peer)
+ 
++org.freedesktop.DBus.GetConnectionAppArmorSecurityContext - get the task confinement of a D-Bus connection's owner
++
+ =head1 SYNOPSIS
+ 
+ B<#include E<lt>sys/apparmor.hE<gt>>
+@@ -46,6 +48,10 @@ B<int aa_getpeercon(int fd, char **con,
+ 
+ Link with B<-lapparmor> when compiling.
+ 
++Additionally, a D-Bus method is available:
++
++B<STRING org.freedesktop.DBus.GetConnectionAppArmorSecurityContext(in STRING name)>
++
+ =head1 DESCRIPTION
+ 
+ The aa_getcon function gets the current AppArmor confinement context for the
+@@ -74,6 +80,11 @@ an allocated buffer.
+ The aa_getprocattr_raw() is the backend for the aa_getprocattr function and
+ does not handle buffer allocation.
+ 
++The org.freedesktop.DBus.GetConnectionAppArmorSecurityContext() D-Bus method
++gets the AppArmor confinement string associated with the unique connection
++name. If D-Bus is not performing AppArmor mediation, the
++org.freedesktop.DBus.Error.AppArmorSecurityContextUnknown error is returned.
++
+ =head1 RETURN VALUE
+ 
+ On success size of data placed in the buffer is returned, this includes the

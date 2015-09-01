@@ -1,0 +1,14 @@
+Description: allow parser to build even when not on Linux.
+Author: Kees Cook <kees@debian.org>
+
+--- a/common/Make.rules
++++ b/common/Make.rules
+@@ -185,7 +185,7 @@
+ CAPABILITIES=$(shell echo "\#include <linux/capability.h>" | cpp -dM | LC_ALL=C sed -n -e '/CAP_EMPTY_SET/d' -e 's/^\#define[ \t]\+CAP_\([A-Z0-9_]\+\)[ \t]\+\([0-9xa-f]\+\)\(.*\)$$/CAP_\1/p' | sort)
+ 
+ .PHONY: list_capabilities
+-list_capabilities: /usr/include/linux/capability.h
++list_capabilities:
+ 	@echo "$(CAPABILITIES)"
+ 
+ # =====================

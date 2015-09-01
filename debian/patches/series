@@ -1,0 +1,33 @@
+#
+# Debian-specific patches
+#
+
+notify-group.patch
+abstractions-ubuntu-browsers.patch
+
+#
+# Ubuntu-specific patches
+#
+add-debian-integration-to-lighttpd.patch
+ubuntu-manpage-updates.patch
+libapparmor-layout-deb.patch
+etc-writable.patch
+aa-utils_are_bilingual.patch
+parser-include-usr-share-apparmor.patch
+
+#
+# Patches not yet upstream
+#
+libapparmor-mention-dbus-method-in-getcon-man.patch
+add-chromium-browser.patch
+pass-compiler-flags.patch
+raise-test-timeout.patch
+non-linux.patch
+
+#
+# Patches backported from upstream commits
+#
+
+#
+# Patches backported from upstream fixes submissions
+#

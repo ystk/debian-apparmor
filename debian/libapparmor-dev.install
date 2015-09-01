@@ -1,0 +1,5 @@
+usr/lib/*/libapparmor.a
+usr/lib/*/libapparmor.la
+usr/lib/*/libapparmor.so
+usr/lib/*/pkgconfig/libapparmor*
+usr/include/*
